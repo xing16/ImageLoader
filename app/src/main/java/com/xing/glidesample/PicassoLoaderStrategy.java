@@ -20,6 +20,11 @@ public class PicassoLoaderStrategy implements ImageLoaderStrategy {
     }
 
     @Override
+    public void clear(ImageView imageView) {
+
+    }
+
+    @Override
     public void clearMemoryCache() {
 
     }

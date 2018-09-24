@@ -17,8 +17,8 @@ public class ImageLoaderOptions {
     private Integer resId;
     private File file;
     private Uri uri;
-    private Integer placeholderResId;
-    private Integer errorResId;
+    private Integer placeholderResId = null;
+    private Integer errorResId = null;
     private boolean noFade = false;
     private boolean isCenterCrop = true;
     private boolean isCenterInside = false;
@@ -95,6 +95,12 @@ public class ImageLoaderOptions {
     public ImageLoaderOptions noFade(boolean noFade) {
         this.noFade = noFade;
         return this;
+    }
+
+    public void clear(ImageView imageView) {
+        ImageLoader.getInstance()
+                .getImageLoaderStrategy()
+                .clear(imageView);
     }
 
     public void into(ImageView imageView) {

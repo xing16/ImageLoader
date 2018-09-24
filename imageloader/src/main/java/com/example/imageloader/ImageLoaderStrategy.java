@@ -11,6 +11,8 @@ public interface ImageLoaderStrategy {
 
     void loadImage(Fragment fragment, ImageView imageView, ImageLoaderOptions options);
 
+    void clear(ImageView imageView);
+
     // 清除内存缓存
     void clearMemoryCache();
 
